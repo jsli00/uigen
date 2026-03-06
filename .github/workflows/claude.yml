@@ -34,7 +34,7 @@ jobs:
 
           custom_instructions: |
             The project is already set up with all dependencies installed.
-            The server is already running at localhost:3000. Logs from it
+            The server is already running at 192.168.1.7:3000. Logs from it
             are being written to logs.txt. If needed, you can query the
             db with the 'sqlite3' cli. If needed, use the mcp__playwright
             set of tools to launch a browser and interact with the app.      
