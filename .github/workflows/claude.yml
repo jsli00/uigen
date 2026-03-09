@@ -23,6 +23,9 @@ jobs:
       pull-requests: write
       issues: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4        # ← this was missing
+
       - name: Project Setup
         run: |
             npm run setup
@@ -34,7 +37,7 @@ jobs:
 
           custom_instructions: |
             The project is already set up with all dependencies installed.
-            The server is already running at 192.168.1.7:3000. Logs from it
+            The server is already running at 100.89.171.107:3000. Logs from it
             are being written to logs.txt. If needed, you can query the
             db with the 'sqlite3' cli. If needed, use the mcp__playwright
             set of tools to launch a browser and interact with the app.      
@@ -47,7 +50,7 @@ jobs:
                   "args": [
                     "@playwright/mcp@latest",
                     "--allowed-origins",
-                    "192.168.1.7:3000;cdn.tailwindcss.com;esm.sh"
+                    "100.89.171.107:3000;cdn.tailwindcss.com;esm.sh"
                   ]
                 }
               }
